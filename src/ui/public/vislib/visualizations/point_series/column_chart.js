@@ -60,6 +60,12 @@ export default function ColumnChartFactory(Private) {
         bars.call(tooltip.render());
       }
 
+      bars.each(function () {
+        $(this).on('click', function () {
+          window.parent.postMessage({ event: 'kibana-chart-click' }, '*');
+        });
+      });
+
       return bars;
     }
 

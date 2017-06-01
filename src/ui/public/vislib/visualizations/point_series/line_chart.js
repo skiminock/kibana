@@ -201,6 +201,10 @@ export default function LineChartFactory(Private) {
       return function (selection) {
         selection.each(function () {
 
+          $(this).on('click', function () {
+            window.parent.postMessage({ event: 'kibana-chart-click' }, '*');
+          });
+
           const svg = self.chartEl.append('g');
           svg.data([self.chartData]);
 

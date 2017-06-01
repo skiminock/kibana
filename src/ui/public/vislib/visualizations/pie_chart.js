@@ -168,6 +168,10 @@ export default function PieChartFactory(Private) {
         path.call(tooltip.render());
       }
 
+      $(this).on('click', function () {
+        window.parent.postMessage({ event: 'kibana-chart-click' }, '*');
+      });
+
       return path;
     }
 
