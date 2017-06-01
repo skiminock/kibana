@@ -62,7 +62,7 @@ export default function ColumnChartFactory(Private) {
 
       bars.each(function () {
         $(this).on('click', function () {
-          window.parent.postMessage({ event: 'kibana-chart-click' }, '*');
+          window.parent.postMessage({ eventName: 'kibana-chart-click' }, '*');
         });
       });
 

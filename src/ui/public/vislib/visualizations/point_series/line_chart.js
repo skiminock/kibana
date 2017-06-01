@@ -202,7 +202,7 @@ export default function LineChartFactory(Private) {
         selection.each(function () {
 
           $(this).on('click', function () {
-            window.parent.postMessage({ event: 'kibana-chart-click' }, '*');
+            window.parent.postMessage({ eventName: 'kibana-chart-click' }, '*');
           });
 
           const svg = self.chartEl.append('g');
