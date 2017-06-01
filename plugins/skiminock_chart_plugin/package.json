@@ -1,0 +1,9 @@
+{
+  "name": "skiminock_chart_plugin",
+  "version": "0.1.0",
+  "description": "Skiminock Chart Plugin",
+  "main": "index.js",
+  "kibana": {
+    "version": "5.4.0"
+  }
+}

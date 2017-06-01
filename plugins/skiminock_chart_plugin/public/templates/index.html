@@ -1,0 +1,19 @@
+<div class="container" ng-controller="SkiminockChartPluginController">
+  <h2>CHART #{{ visibleFrame }}</h2>
+
+  <div class="row my-chart-wrapper" ng-if="visibleFrame === 1">
+    <iframe name="Frame1"
+            src="https://localhost:5601/abl/app/kibana#/visualize/edit/81e9a640-456b-11e7-8fcd-4574772325f5?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(field:speech_number,order:desc,orderBy:'1',size:5),schema:segment,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'speech_number:+Descending'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:9,scale:linear,seriesParams:!((data:(id:'1',label:Count),drawLinesBetweenPoints:!t,interpolate:linear,lineWidth:2,mode:normal,show:!t,showCircles:!t,type:line,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:Count),type:value))),title:'Test+Historgram+Visualization+1',type:line))" height="600" width="800"></iframe>
+  </div>
+
+  <div class="row my-chart-wrapper" ng-if="visibleFrame === 2">
+    <iframe name="Frame2"
+            src="https://localhost:5601/abl/app/kibana#/visualize/edit/04424c50-4530-11e7-b92f-1bc932b94d7c?embed=true&_g=()" height="600" width="800"></iframe>
+  </div>
+
+  <div class="row my-chart-wrapper" ng-if="visibleFrame === 3">
+    <iframe name="Frame3"
+            src="https://localhost:5601/abl/app/kibana#/visualize/edit/b17de0f0-4634-11e7-9fac-5fa90b98b058?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'*')),uiState:(),vis:(aggs:!((enabled:!t,id:'1',params:(field:line_id),schema:metric,type:max),(enabled:!t,id:'2',params:(field:play_name,order:desc,orderBy:'1',size:5),schema:segment,type:terms),(enabled:!t,id:'3',params:(field:speech_number,order:asc,orderBy:'1',size:5),schema:group,type:terms),(enabled:!t,id:'4',params:(field:speech_number),schema:metric,type:avg)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,categoryAxes:!((id:CategoryAxis-1,labels:(show:!t,truncate:100),position:bottom,scale:(type:linear),show:!t,style:(),title:(text:'play_name:+Descending'),type:category)),defaultYExtents:!f,drawLinesBetweenPoints:!t,grid:(categoryLines:!f,style:(color:%23eee)),interpolate:linear,legendPosition:right,radiusRatio:'21',scale:linear,seriesParams:!((data:(id:'1',label:'Max+line_id'),drawLinesBetweenPoints:!t,mode:stacked,show:true,showCircles:!t,type:histogram,valueAxis:ValueAxis-1),(data:(id:'4',label:'Average+speech_number'),drawLinesBetweenPoints:!t,interpolate:linear,lineWidth:2,mode:stacked,show:!t,showCircles:!t,type:histogram,valueAxis:ValueAxis-1)),setYExtents:!f,showCircles:!t,times:!(),valueAxes:!((id:ValueAxis-1,labels:(filter:!f,rotate:0,show:!t,truncate:100),name:LeftAxis-1,position:left,scale:(mode:normal,type:linear),show:!t,style:(),title:(text:''),type:value))),title:'Test+Historgram+Visualization+3',type:histogram))" height="600" width="800"></iframe>
+  </div>
+
+</div>
